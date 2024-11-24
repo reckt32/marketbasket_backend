@@ -5,10 +5,7 @@ const userSchema = new Schema({
   name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
   purchaseHistory: [
-    {
-      productId: { type: Schema.Types.ObjectId, ref: 'Product' },
-      date: { type: Date, default: Date.now }
-    }
+    { type: Schema.Types.ObjectId, ref: 'PurchaseHistory' } 
   ]
 });
 
